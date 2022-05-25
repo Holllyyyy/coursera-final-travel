@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="./css/table.css">
+</head>
+<body>
+    
+
+<div id="form" class="form-date">
+    <form action="index.html" method="get" class="form">
+      <div class="row-one">
+        <div class="destination">
+          <label for="inputCity">Choose Your Destination</label>
+          <input
+            name="destination"
+            type="text"
+            class="dest-first form-control"
+            id="inputCity"
+            placeholder="Type your destination..."
+          />
+        </div>
+        <div class="room">
+            <label for="inputRoom">How many  rooms?</label>
+            <select
+              name="room"
+              class="form-control tm-select"
+              id="inputRoom"
+            >
+              <option value="1" selected>1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+              <option value="4">4 Rooms</option>
+              <option value="5">5 Rooms</option>
+              <option value="6">6 Rooms</option>
+              <option value="7">7 Rooms</option>
+              <option value="8">8 Rooms</option>
+              <option value="9">9 Rooms</option>
+              <option value="10">10 Rooms</option>
+            </select>
+          </div>
+          <div class="adult">
+            <label for="inputAdult">Adult</label>
+            <select name="adult" class="form-control" id="inputAdult">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+    
+          <div class="children">
+            <label for="inputChildren">Children</label>
+            <select
+              name="children"
+              class="form-control"
+              id="inputChildren"
+            >
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        <div class="checkIn">
+          <label for="inputCheckIn">Check In Date</label>
+          <input
+            name="check-in"
+            type="text"
+            class="form-control"
+            id="inputCheckIn"
+            placeholder="Check In"
+          />
+        </div>
+        <div class="checkOut">
+          <label for="inputCheckOut">Check Out Date</label>
+          <input
+            name="check-out"
+            type="text"
+            class="form-control"
+            id="inputCheckOut"
+            placeholder="Check Out"
+          />
+        </div>
+        <div class="submit">
+          <label for="btnSubmit">&nbsp;</label>
+          <button type="submit" class="btn-submit" id="btnSubmit">
+            Check Availability
+          </button>
+        </div>
+    </form>
+  </div>
+
+</body>
+</html>

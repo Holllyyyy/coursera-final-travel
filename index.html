@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6a4d0636fa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container container">
+        <button class="nav-toggle" aria-label="open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <a class="logo" href="#"
+          ><img src="./images/logo.png" alt="logo of travel agency" />
+        </a>
+        <span class="logo-title">JOURNEY</span>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#top" class="nav-link">Top Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#places" class="nav-link">Recommended Places</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="home" class="background-image section-container">
+      <div class="section-one">
+        <h1 class="section-title white">LET'S BEGIN</h1>
+        <div class="image-points">
+          <img src="./images/dots-3.png" alt="three dots" />
+        </div>
+        <p class="section-text white">We assist you to choose the best!</p>
+        <div class="btn-parent">
+          <a href="#form" class="btn-circle"
+            ><i class="fa-solid fa-angle-down"></i
+          ></a>
+        </div>
+            <div id="form" class="form-date">
+          <form action="index.html" method="get" class="form">
+              <div class="destination">
+                <label for="inputCity">Choose Your Destination</label>
+                <input
+                  name="destination"
+                  type="text"
+                  class="dest-first form-control"
+                  id="inputCity"
+                  placeholder="Type your destination..."
+                />
+              </div>
+              <div class="room">
+                <label for="inputRoom">How many rooms?</label>
+                <select
+                  name="room"
+                  class="form-control tm-select"
+                  id="inputRoom"
+                >
+                  <option value="1" selected>1 Room</option>
+                  <option value="2">2 Rooms</option>
+                  <option value="3">3 Rooms</option>
+                  <option value="4">4 Rooms</option>
+                  <option value="5">5 Rooms</option>
+                  <option value="6">6 Rooms</option>
+                  <option value="7">7 Rooms</option>
+                  <option value="8">8 Rooms</option>
+                  <option value="9">9 Rooms</option>
+                  <option value="10">10 Rooms</option>
+                </select>
+              </div>
+              <div class="adult">
+                <label for="inputAdult">Adult</label>
+                <select name="adult" class="form-control" id="inputAdult">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <div class="children">
+                <label for="inputChildren">Children</label>
+                <select name="children" class="form-control" id="inputChildren">
+                  <option value="0" selected>0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="checkIn">
+                <label for="inputCheckIn">Check In Date</label>
+                <input
+                  name="check-in"
+                  type="text"
+                  class="form-control"
+                  id="inputCheckIn"
+                  placeholder="Check In"
+                />
+              </div>
+              <div class="checkOut">
+                <label for="inputCheckOut">Check Out Date</label>
+                <input
+                  name="check-out"
+                  type="text"
+                  class="form-control"
+                  id="inputCheckOut"
+                  placeholder="Check Out"
+                />
+              </div>
+              <div class="submit">
+                <label for="btnSubmit">&nbsp;</label>
+                <button type="submit" class="btn-submit" id="btnSubmit">
+                  Check Availability
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </section> 
+        <aside class="aside">
+      <h2 class="aside-heading">Your Jorney is our priority</h2>
+      <p class="aside-description">
+        We have a lot of offers so be sure to check all our offers
+      </p>
+      <a href="#" class="aside-btn"> Explore more</a>
+    </aside>
+    <section id="top" class="section-two">
+      
+      <div class="first-picture">
+        <figure class="figure-first">
+          <img src="./images/tm-img-01.jpg" alt="" />
+          <!--<button></button>
+          <button></button>-->
+        </figure>
+        <div>
+          <div class="parent-box-blue">
+        <div class="blue-box">
+          <div class="kutija">
+          <h3>Europe's most visited places</h3>
+          <p>
+            theres a lot of stuff what we could say about this and its very
+            interesting
+          </p>
+          <a href="#">Continue reading</a>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    
+      <div class="second-picture">
+      <div class="parent-box-pink">
+        <div class="pink-box">
+          <div class="box">
+          <h3>Asia's most popular places</h3>
+          <p>
+            theres a lot of stuff what we could say about this and its very
+            interesting
+          </p>
+          <a href="#">Continue reading</a>
+        </div>
+        </div>
+        </div>
+
+        <figure class="figure-first">
+  <!---<button></button>
+  <button></button>-->
+          <img src="./images/tm-img-02.jpg" alt="" />
+   
+        </figure>
+      </div>
+
+      <div class="first-picture">
+        <figure class="figure-first">
+          <img src="./images/tm-img-01.jpg" alt="" />
+          <!--<button></button>
+          <button></button>-->
+        </figure>
+        <div class="parent-box-blue">
+        <div class="blue-box">
+          <div class="kutija">
+          <h3>America's most famous places</h3>
+          <p>
+            theres a lot of stuff what we could say about this and its very
+            interesting
+          </p>
+          <a href="#">Continue reading</a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <section id="places">
+      <div class="continents">
+        <img src="./images/africa.png" alt="" />
+        <img src="./images/antartica.png" alt="" />
+        <img src="./images/asia.png" alt="" />
+        <img src="./images/australia.png" alt="" />
+        <img src="./images/south-america.png" alt="" />
+        <img src="./images/europe.png" alt="" /><img
+          src="./images/north-america.png"
+          alt=""
+        />
+      </div>
+      <div class="hotel-prices">
+        <img src="./images/tm-img-01.jpg" alt="" />
+        <h3>Hotel meow</h3>
+        <p>The most beautiful hotel</p>
+        <p>Here u can book rooms for very cheap and feel so happy</p>
+        <p>450$</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <div class="hotel-prices">
+        <img src="./images/tm-img-01.jpg " alt="" />
+        <h3>Hotel meow</h3>
+        <p>The most beautiful hotel</p>
+        <p>Here u can book rooms for very cheap and feel so happy</p>
+        <p>450$</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <div class="hotel-prices">
+        <img src="./images/tm-img-01.jpg" alt="" />
+        <h3>Hotel meow</h3>
+        <p>The most beautiful hotel</p>
+        <p>Here u can book rooms for very cheap and feel so happy</p>
+        <p>450$</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <div class="hotel-prices">
+        <img src="./images/tm-img-01.jpg" alt="" />
+        <h3>Hotel meow</h3>
+        <p>The most beautiful hotel</p>
+        <p>Here u can book rooms for very cheap and feel so happy</p>
+        <p>450$</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <a href="#"> See more offers</a>
+    </section>
+
+    <section id="contact">
+      <h3>HERE WILL BE CONTACT FORM</h3>
+    </section>
+    <footer>THIS IS FOOTER</footer>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
