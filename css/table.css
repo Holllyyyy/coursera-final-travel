@@ -1,45 +1,60 @@
-* {
+/*mobile view*/* {
     box-sizing: border-box;
     padding: 0%;
     margin: 0;
 }
 
-.form-date {
-    width: 50%;
-    display:grid;
-    padding:2rem 1rem;;
+.form {
+    max-width: 80%;
+    padding:2rem 1rem;
     color: #000;
     background-color: #fff;
-    border: 2px solid blue;;
+    border: 2px solid blue;
     margin:0 auto;
 }
-.row-one {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1rem;
+label,input,select{
+    width:100%;
 }
-
-.destination {
-    grid-column: 1/2;
-    width: 100%;
-}
-
-.dest-first {
-    padding: 5px 50px 5px 50px;
-}
-
 label {
     font-size: 1rem;
     font-weight: 700;
+    padding: 0.7rem 0rem;
 }
-
 select {
-    padding: 5px 50px;
+    padding: 0.7rem 2rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
 }
 
 input {
-    padding: 5px 50px;
+    padding: 0.7rem 2rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+;
 }
+.btn-submit {
+    padding: 0.7rem 2rem;
+    width: 100%;
+    color: #fff;
+    background-color:  rgb(3, 205, 205);
+    border: 2px solid rgb(3, 205, 205);
+    text-transform: uppercase;
+}
+.btn-submit:hover, .btn-submit:focus{
+    background-color:  rgb(189, 60, 157);
+    border:  rgb(189, 60, 157);
+}
+
+
+/*Desktop view*/
+@media (min-width700px) {
+
+
+
+
+    
+}
+
 
 .room {
     grid-column: 4/5;
@@ -69,15 +84,6 @@ input {
     grid-row: 2;
 }
 
-.btn-submit {
-    padding: 5px 50px;
-    width: 100%;
-    color: #fff;
-    background-color:  rgb(3, 205, 205);
-    border: 2px solid rgb(3, 205, 205);
-    text-transform: uppercase;
-}
-.btn-submit:hover, .btn-submit:focus{
-    background-color:  rgb(189, 60, 157);
-    border:  rgb(189, 60, 157);
-}
+
+
+*/
