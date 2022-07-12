@@ -752,13 +752,6 @@ p {
 
 }
 
-.curve {
-  transform: rotate(0.25turn);
-  width: 32%;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .price {
   font-size: 2rem;
   font-weight: 700;
