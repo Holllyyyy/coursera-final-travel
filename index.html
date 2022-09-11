@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/6a4d0636fa.js"
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <header>
       <div class="header-container container">
@@ -23,7 +21,6 @@
           ><img src="./images/logo.png" alt="logo of travel agency" />
         </a>
         <span class="logo-title">JOURNEY</span>
-
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -40,21 +37,21 @@
         </nav>
       </div>
     </header>
-
-    <section id="home" class="background-image section-container">
-      <div class="section-one">
-        <h1 class="section-title white">LET'S BEGIN</h1>
-        <div class="image-points">
-          <img src="./images/dots-3.png" alt="three dots" />
-        </div>
-        <p class="section-text white">We assist you to choose the best!</p>
-        <div class="btn-parent">
-          <a href="#form" class="btn-circle"
-            ><i class="fa-solid fa-angle-down"></i
-          ></a>
-        </div>
-        <form>
-          <div class="form">
+    <section id="home" class="background-image section-container section-one">
+      <h1 class="section-title white">LET'S BEGIN</h1>
+      <div class="image-points">
+        <img src="./images/dots-3.png" alt="three dots" />
+      </div>
+      <p class="section-text white">We assist you to choose the best!</p>
+      <div class="btn-parent">
+        <button class="btn-circle">
+          <i class="fa-solid fa-angle-down"></i>
+          <span class="visually-hidden"
+            >Check it here what kinda offers we have for ya</span
+          >
+        </button>
+      </div>
+      <form class="form">
         <div class="destination">
           <label for="inputCity">Choose Your Destination</label>
           <input
@@ -66,12 +63,8 @@
           />
         </div>
         <div class="room">
-          <label for="inputRoom">How many  rooms?</label><br>
-          <select
-            name="room"
-            class="form-control tm-select"
-            id="inputRoom"
-          >
+          <label for="inputRoom">How many rooms?</label><br />
+          <select name="room" class="form-control tm-select" id="inputRoom">
             <option value="1" selected>1 Room</option>
             <option value="2">2 Rooms</option>
             <option value="3">3 Rooms</option>
@@ -84,10 +77,8 @@
             <option value="10">10 Rooms</option>
           </select>
         </div>
-  
         <div class="adult">
-        
-          <label for="inputAdult">Adult</label> <br>
+          <label for="inputAdult">Adult</label> <br />
           <select name="adult" class="form-control" id="inputAdult">
             <option value="1" selected>1</option>
             <option value="2">2</option>
@@ -100,18 +91,10 @@
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
-        
         </div>
-        
-        
         <div class="children">
-        
-          <label for="inputChildren">Children</label><br>
-          <select
-            name="children"
-            class="form-control"
-            id="inputChildren"
-          >
+          <label for="inputChildren">Children</label><br />
+          <select name="children" class="form-control" id="inputChildren">
             <option value="0" selected>0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -125,7 +108,6 @@
           </select>
         </div>
         <div class="checkIn">
-        
           <label for="inputCheckIn">Check In Date</label>
           <input
             name="check-in"
@@ -136,7 +118,6 @@
           />
         </div>
         <div class="checkOut">
-        
           <label for="inputCheckOut">Check Out Date</label>
           <input
             name="check-out"
@@ -146,7 +127,6 @@
             placeholder="Check Out"
           />
         </div>
-        
         <div class="submit">
           <label for="btnSubmit">&nbsp;</label>
           <button type="submit" class="btn-submit" id="btnSubmit">
@@ -154,10 +134,8 @@
           </button>
         </div>
       </form>
-    </div>
     </section>
-        <!--  <form action="index.html" method="get" class="form">-->   
-        <aside class="aside">
+    <aside class="aside">
       <h2 class="aside-heading">Your Jorney is our priority</h2>
       <p class="aside-description">
         We have a lot of offers so be sure to check all our offers
@@ -165,209 +143,236 @@
       <a href="#" class="aside-btn"> Explore more</a>
     </aside>
 
-
-      <section id="top" class="section-two">
-        <div class="first-picture">
-          <figure class="figure-first">
-            <img src="./images/tm-img-01.jpg" alt="" />
-          </figure>
-          <div class="parent-box-blue">
+    <section id="top" class="section-two">
+      <div class="first-picture">
+        <figure class="figure-first">
+          <img
+            id="firstImage"
+            src="./images/europe-top-attractions-colosseum-rome.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="parent-box-blue">
           <div class="parent-button">
-            <button class="btn-left">
+            <button id="btnLeft" class="btn-left" aria-hidden="true">
               <i class="fa-solid fa-circle-arrow-left"></i>
+              <span class="visually-hidden">Button left</span>
             </button>
-            <button class="btn-right">
-              <i class="fa-solid fa-circle-arrow-right"></i>
+            <button id="btnRight" class="btn-right" aria-hidden="true">
+              <i class="fa-solid fa-circle-arrow-right"> </i>
+              <span class="visually-hidden">Button right</span>
             </button>
           </div>
-            
-            <div class="blue-box">
-              <h3>Europe's most visited places</h3>
-              <p>
-                theres a lot of stuff what we could say about this and its very
-                interesting
-              </p>
-              <a href="#" class="btn">Continue reading</a>
-            </div>
+          <div class="blue-box">
+            <h3 id="continent">Europe's most visited places</h3>
+            <p id="description">
+              COLLOSSEUM ITALY Romes Flavian Amphitheater, better known as the
+              Colosseum
+            </p>
+            <a
+              href="https://www.planetware.com/rome/colosseum-i-la-rcl.htm"
+              target="_blank"
+              class="btn"
+              >Continue reading</a
+            >
           </div>
         </div>
-        <div class="second-picture">
-          <figure class="figure-first">
-            <div class="parent-button">    <button class="btn-left-pink">
-              <i class="fa-solid fa-circle-arrow-left"></i>
-            </button>
-            <button class="btn-right-pink">
-              <i class="fa-solid fa-circle-arrow-right"></i>
-            </button></div>
-            <img src="./images/tm-img-01.jpg" alt="" />
-     
-            
-          </figure>
-          <div class="parent-box-pink">
-         
-            <div class="pink-box">
-              <h3>Europe's most visited places</h3>
-              <p>
-                theres a lot of stuff what we could say about this and its very
-                interesting
-              </p>
-              <a href="#" class="btn-pink">Continue reading</a>
-            
-          
-            </div>
-            
-          </div>
-        </div>
-       
-  
-        <div class="first-picture">
-          <figure class="figure-first">
-            <img src="./images/tm-img-01.jpg" alt="" />
-          </figure>
-          <div class="parent-box-blue">
+      </div>
+      <div class="second-picture">
+        <figure class="figure-first">
           <div class="parent-button">
-          
-            <button class="btn-left">
+            <button class="btn-left-pink" aria-hidden="true">
               <i class="fa-solid fa-circle-arrow-left"></i>
+              <span class="visually-hidden">Button left</span>
             </button>
-            <button class="btn-right">
+            <button class="btn-right-pink" aria-hidden="true">
               <i class="fa-solid fa-circle-arrow-right"></i>
+              <span class="visually-hidden">Button left</span>
             </button>
           </div>
-            
-            <div class="blue-box">
-              <h3>Europe's most visited places</h3>
-              <p>
-                theres a lot of stuff what we could say about this and its very
-                interesting
-              </p>
-              <a href="#" class="btn">Continue reading</a>
-            </div>
+          <img
+            src="./images/asia-best-places-to-visit-mount-fuji-japan.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="parent-box-pink">
+          <div class="pink-box">
+            <h3>Asian's most visited places</h3>
+            <p>
+              Although Mount Fuji is an active stratovolcano, it hasn't erupted
+              since 1708.
+            </p>
+            <a
+              href="https://www.planetware.com/japan/mount-fuji-jpn-kn-fuji.htm"
+              target="_blank"
+              class="btn-pink"
+              >Continue reading</a
+            >
           </div>
         </div>
-      </section>
-      <section id="places" class="section-three">
-        <ul class="continents">
-          <li class="cont-li">
-            <a href="#1" class="cont-link"
-              ><img src="./images/antartica.png" alt="" />Antartica</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#2" class="cont-link"
-              ><img src="./images/asia.png" alt="" />Asia</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#3" class="cont-link"
-              ><img src="./images/north-america.png" alt="" />North America</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#4" class="cont-link"
-              ><img src="./images/europe.png" alt="" />Europe</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#5" class="cont-link"
-              ><img src="./images/australia.png" alt="" />Australia</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#6" class="cont-link"
-              ><img src="./images/south-america.png" alt="" />South America</a
-            >
-          </li>
-          <li class="cont-li">
-            <a href="#7" class="cont-link"
-              ><img src="./images/africa.png" alt="" />Africa</a
-            >
-          </li>
-        </ul>
-  
-        <div class="parent-prices">
-          <div class="hotel-prices">
-            <img src="./images/tm-img-07.jpg" alt="" />
-            <div class="mid-text">
-              <h3 class="hotel-name">Hotel meow</h3>
-              <p class="hotel-location">Paris</p>
-              <p class="hotel-description">
-                Here u can book rooms for very cheap and feel so happy
-              </p>
-            </div>
-            <div class="right-prices">
-              <p class="price">450$</p>
-              <a href="#" class="btn-price">Continue reading</a>
-            </div>
+      </div>
+      <div class="first-picture">
+        <figure class="figure-first">
+          <img
+            src="./images/africa-best-places-to-visit-cape-town-south-africa.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="parent-box-blue">
+          <div class="parent-button">
+            <button class="btn-left" aria-hidden="true">
+              <i class="fa-solid fa-circle-arrow-left"></i>
+              <span class="visually-hidden">Button left</span>
+            </button>
+            <button class="btn-right" aria-hidden="true">
+              <i class="fa-solid fa-circle-arrow-right"></i>
+              <span class="visually-hidden">Button left</span>
+            </button>
           </div>
-  
-          <div class="hotel-prices">
-            <img src="./images/tm-img-04.jpg " alt="" />
-            <div class="mid-text">
-              <h3 class="hotel-name">Hotel meow</h3>
-              <p class="hotel-location">Paris</p>
-              <p class="hotel-description">
-                Here u can book rooms for very cheap and feel so happy
-              </p>
-            </div>
-            <div class="right-prices">
-              <p class="price">450$</p>
-              <a href="#" class="btn-price">Continue reading</a>
-            </div>
+          <div class="blue-box">
+            <h3>Africa's most visited places</h3>
+            <p>
+              One of the most beloved destinations on the continent, Cape Town
+              sits at the southern tip of South Africa,
+            </p>
+            <a
+              href="https://www.planetware.com/tourist-attractions-/cape-town-saf-wc-cape.htm"
+              target="_blank"
+              class="btn"
+              >Continue reading</a
+            >
           </div>
-  
-          <div class="hotel-prices">
-            <img src="./images/tm-img-05.jpg " alt="" />
-            <div class="mid-text">
-              <h3 class="hotel-name">Hotel meow</h3>
-              <p class="hotel-location">Paris</p>
-              <p class="hotel-description">
-                Here u can book rooms for very cheap and feel so happy
-              </p>
-            </div>
-            <div class="right-prices">
-              <p class="price">450$</p>
-              <a href="#" class="btn-price">Continue reading</a>
-            </div>
-          </div>        
-         <div class="hotel-prices">
-            <img src="./images/tm-img-06.jpg " alt="" />
-            <div class="mid-text">
-              <h3 class="hotel-name">Hotel meow</h3>
-              <p class="hotel-location">Paris</p>
-              <p class="hotel-description">
-                Here u can book rooms for very cheap and feel so happy
-              </p>
-            </div>
-            <div class="right-prices">
-              <p class="price">450$</p>
-              <a href="#" class="btn-price">Continue reading</a>
-            </div>
-          </div>
-          <a href="#" class="btn-section-three"> See more offers</a>
         </div>
-      </section>
-
-
-
-
-    <section id="contact" class="form-contact">
-      
-        <form action="" class="form-contact-s">
-      
-          <label for="fname"></label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname"></label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          <label for="subject"></label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
-          </textarea>
-          <input type="submit" value="Contact us" class="form-submit">      
-        </form>
+      </div>
     </section>
-    <footer> <p > Made by Svetlana Jokic</p> 
+    <section id="places" class="section-three">
+      <ul class="continents">
+        <li class="cont-li">
+          <a href="#1" class="cont-link"
+            ><img src="./images/antartica.png" alt="" />Antartica</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#2" class="cont-link"
+            ><img src="./images/asia.png" alt="" />Asia</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#3" class="cont-link"
+            ><img src="./images/north-america.png" alt="" />North America</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#4" class="cont-link"
+            ><img src="./images/europe.png" alt="" />Europe</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#5" class="cont-link"
+            ><img src="./images/australia.png" alt="" />Australia</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#6" class="cont-link"
+            ><img src="./images/south-america.png" alt="" />South America</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#7" class="cont-link"
+            ><img src="./images/africa.png" alt="" />Africa</a
+          >
+        </li>
+      </ul>
+      <div class="parent-prices">
+        <div class="hotel-prices">
+          <img src="./images/tm-img-07.jpg" alt="" />
+          <div class="mid-text">
+            <h3 class="hotel-name">Hotel meow</h3>
+            <p class="hotel-location">Paris</p>
+            <p class="hotel-description">
+              Here u can book rooms for very cheap and feel so happy
+            </p>
+          </div>
+          <div class="right-prices">
+            <p class="price">450$</p>
+            <a href="#" class="btn-price">Continue reading</a>
+          </div>
+        </div>
+        <div class="hotel-prices">
+          <img src="./images/tm-img-04.jpg " alt="" />
+          <div class="mid-text">
+            <h3 class="hotel-name">Hotel meow</h3>
+            <p class="hotel-location">Paris</p>
+            <p class="hotel-description">
+              Here u can book rooms for very cheap and feel so happy
+            </p>
+          </div>
+          <div class="right-prices">
+            <p class="price">450$</p>
+            <a href="#" class="btn-price">Continue reading</a>
+          </div>
+        </div>
+        <div class="hotel-prices">
+          <img src="./images/tm-img-05.jpg " alt="" />
+          <div class="mid-text">
+            <h3 class="hotel-name">Hotel meow</h3>
+            <p class="hotel-location">Paris</p>
+            <p class="hotel-description">
+              Here u can book rooms for very cheap and feel so happy
+            </p>
+          </div>
+          <div class="right-prices">
+            <p class="price">450$</p>
+            <a href="#" class="btn-price">Continue reading</a>
+          </div>
+        </div>
+        <div class="hotel-prices">
+          <img src="./images/tm-img-06.jpg " alt="" />
+          <div class="mid-text">
+            <h3 class="hotel-name">Hotel meow</h3>
+            <p class="hotel-location">Paris</p>
+            <p class="hotel-description">
+              Here u can book rooms for very cheap and feel so happy
+            </p>
+          </div>
+          <div class="right-prices">
+            <p class="price">450$</p>
+            <a href="#" class="btn-price">Continue reading</a>
+          </div>
+        </div>
+        <a href="#" class="btn-section-three"> See more offers</a>
+      </div>
+    </section>
+    <div id="contact" class="form-contact">
+      <form action="#" class="form-contact-s">
+        <label for="fname">Enter your first name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+        <label for="lname">Enter your last name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+        <label for="subject">Your questions:</label> <br />
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        >
+        </textarea>
+        <input type="submit" value="Contact us" class="form-submit" />
+      </form>
+    </div>
+    <footer>
+      <p>Made by Svetlana Jokic</p>
     </footer>
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

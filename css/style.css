@@ -1,16 +1,14 @@
 :root {
   --blue: #007bff;
-  --pink: #c66995;
-  --green: #69c6ba;
+  --pink: #671e40;
+  --green: rgb(15, 95, 95);
+  --lightgreen: #20c997;
   --white: #fff;
   --gray: #868e96;
   --gray-dark: #343a40;
   --black: #000;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --grey: #e6e6e6;
+
 }
 
 *,
@@ -40,18 +38,29 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 body {
   line-height: 1.5;
   font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 400;
-  background: #e6e6e6;
-  color: #fff;
+  background: var(--grey);
+  color: var(--white);
 }
 
 /*header and nav*/
 
 header {
-  background-color: #fff;
+  background-color: var(--white);
   padding: 1em 0;
 }
 
@@ -67,7 +76,7 @@ header {
 }
 
 .nav-item {
-  background-color: #fff;
+  background-color: var(--white);
   display: block;
   width: 200px;
   padding: 0.5rem;
@@ -75,7 +84,7 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
   font-weight: 700;
   display: block;
   margin-left: 1rem;
@@ -86,7 +95,7 @@ header {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #20c997;
+  color: var(--lightgreen);
 }
 
 .nav-toggle {
@@ -96,8 +105,8 @@ header {
   height: 3em;
   padding: 0;
   border-radius: 10%;
-  background: #fff;
-  color: #000;
+  background: var(--white);
+  color: var(--black);
   transition: opacity 1s ease;
   position: absolute;
   top: 0;
@@ -123,7 +132,7 @@ header {
   display: block;
   margin: 0 auto;
   height: 3px;
-  background: #20c997;
+  background: var(--lightgreen);
 }
 
 .hamburger::before,
@@ -155,7 +164,7 @@ header {
     align-self: center;
     font-size: 120%;
     margin-left: -3rem;
-    color: #000;
+    color: var(--black);
   }
 
   .btn {
@@ -193,9 +202,6 @@ header {
     padding: 1em 2em;
     border-radius: 5px;
   }
-
-
-
 }
 
 .hamburger::before {
@@ -220,7 +226,7 @@ header {
   margin-top: 320px;
   margin-left: 110px;
   box-shadow: 0px 0px 7px 0px rgb(214 214 214);
-  background-color: #fff;
+  background-color: var(--white);
   z-index: 999;
 }
 
@@ -258,7 +264,7 @@ header {
 .form {
   max-width: 95%;
   padding: 2rem 1rem;
-  color: #000;
+  color: var(--black);
   background-color: #fafafa;
   margin: 0 auto;
 }
@@ -290,16 +296,17 @@ input {
 .btn-submit {
   padding: 0.7rem 2rem;
   width: 100%;
-  color: #fff;
-  background-color: rgb(3, 205, 205);
-  border: 1px solid rgb(3, 205, 205);
+  color: var(--white);
+  background-color: var(--green);
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 .btn-submit:hover,
 .btn-submit:focus {
-  background-color: rgb(189, 60, 157);
-  border: rgb(189, 60, 157);
+  background-color: var(--pink);
 }
 
 /* Form Desktop view*/
@@ -351,15 +358,7 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-  /*z-index: 999;
-    position: absolute;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  
-  */
   min-height: 100vh;
-
 }
 
 .section-title,
@@ -386,14 +385,13 @@ input {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  color: #fff;
+  color: var(--white);
   padding: 10px 15px;
 }
 
 .btn-circle:hover {
   background-color: var(--pink);
 }
-
 
 /*ASIDE MOBILE VIEW*/
 .aside {
@@ -404,9 +402,9 @@ input {
   text-align: center;
   padding: 2rem;
   margin-inline: auto;
-  color: #000;
+  color: var(--black);
   box-shadow: 0px 0px 7px 0px rgb(214 214 214);
-  background: #e6e6e6;
+  background: var(--grey);
   max-width: 85rem;
 }
 
@@ -419,8 +417,13 @@ input {
 .aside-btn {
   background-color: var(--green);
   text-decoration: none;
+  font-weight: 700;
   color: var(--white);
   padding: 0.5em;
+}
+
+button {
+  font-weight: 700;
 }
 
 .aside-btn:hover {
@@ -451,7 +454,6 @@ img {
 
 .parent-box-blue,
 .parent-box-pink {
-
   color: var(--white);
 }
 
@@ -492,14 +494,12 @@ img {
   text-align: start;
 }
 
-
 h3,
 p {
   padding: 1rem;
 }
 
 @media (max-width:799px) {
-
   .parent-button {
     position: relative;
   }
@@ -510,7 +510,7 @@ p {
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: var(--white);
     border: none;
     margin-top: -200px;
   }
@@ -539,7 +539,7 @@ p {
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: var(--white);
     border: none;
     margin-top: 1rem;
   }
@@ -562,7 +562,6 @@ p {
     border: none;
   }
 }
-
 
 /*DESKTOP VIEW*/
 
@@ -595,13 +594,14 @@ p {
 
   .blue-box {
     width: 95%;
-    padding: 3rem 7rem;
+    padding: 3rem 5rem;
     text-align: start;
     margin-left: -3rem;
   }
 
   .parent-box-pink {
     max-width: 100%;
+    font-weight: 500;
   }
 
   .pink-box {
@@ -624,7 +624,7 @@ p {
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: var(--white);
     border: none;
     margin-left: -132px;
     margin-top: 100px;
@@ -650,12 +650,11 @@ p {
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: var(--white);
     border: none;
     margin-left: 47px;
     margin-top: 190px;
   }
-
 
   .btn-right-pink {
     z-index: 1;
@@ -880,13 +879,13 @@ p {
 }
 
 input[type="text"] {
-  border: 2px solid #e6e6e6;
-  background-color: #e6e6e6;
+  border: 2px solid var(--grey);
+  background-color: var(--grey);
 
 }
 
 textarea {
-  background-color: #e6e6e6;
+  background-color: var(--grey);
 }
 
 textarea[placeholder="Write something.."]:hover,
@@ -903,7 +902,6 @@ select[name="adult"]:hover,
 select[name="adult"]:focus,
 select[name="children"]:hover,
 select[name="children"]:focus {
-  border: 2px solid var(--green);
   border-radius: 4px;
   background-color: var(--white);
 }
@@ -913,11 +911,12 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  color: #fff;
+  color: var(--white);
   font-size: 0.85rem;
   background-color: var(--green);
   margin: auto;
   margin-top: 1rem;
+  position: sticky;
 }
 
 .form-submit {
@@ -936,7 +935,7 @@ footer {
 
 @media (min-width:800px) {
   .form-contact {
-    margin: auto;
+    margin: 0 auto;
     max-width: 30%;
     margin-top: 1rem;
   }
@@ -947,5 +946,6 @@ footer {
 
   footer {
     max-width: 85rem;
+    position: sticky;
   }
 }
