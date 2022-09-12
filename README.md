@@ -25,6 +25,11 @@ This project is built with HTML5, CSS3 and JavaScript.
 ![desktop](ss/ss-desktop-second.png)
 ![desktop](ss/ss-desktop-third.png)
 ![desktop](ss/ss-desktop-fourth.png)
+![mobile](ss/ss-phone-one.jpg)
+![mobile](ss/ss-phone-two.jpg)
+![mobile](ss/ss-phone-three.jpg)
+![mobile](ss/ss-phone-four.jpg)
+![mobile](ss/ss-phone-five.jpg)
 
 ### Links
 
@@ -102,28 +107,12 @@ Later on I am going to explain how I did style with CSS.
         <option value="1" selected>1 Room</option>
         <option value="2">2 Rooms</option>
         <option value="3">3 Rooms</option>
-        <option value="4">4 Rooms</option>
-        <option value="5">5 Rooms</option>
-        <option value="6">6 Rooms</option>
-        <option value="7">7 Rooms</option>
-        <option value="8">8 Rooms</option>
-        <option value="9">9 Rooms</option>
-        <option value="10">10 Rooms</option>
-      </select>
     </div>
     <div class="adult">
       <label for="inputAdult">Adult</label> <br />
       <select name="adult" class="form-control" id="inputAdult">
         <option value="1" selected>1</option>
         <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
       </select>
     </div>
     <div class="children">
@@ -132,13 +121,6 @@ Later on I am going to explain how I did style with CSS.
         <option value="0" selected>0</option>
         <option value="1">1</option>
         <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
       </select>
     </div>
     <div class="checkIn">
@@ -300,36 +282,6 @@ At the third section i have list with small images. With 4 divs after it, which 
         ><img src="./images/antartica.png" alt="" />Antartica</a
       >
     </li>
-    <li class="cont-li">
-      <a href="#2" class="cont-link"
-        ><img src="./images/asia.png" alt="" />Asia</a
-      >
-    </li>
-    <li class="cont-li">
-      <a href="#3" class="cont-link"
-        ><img src="./images/north-america.png" alt="" />North America</a
-      >
-    </li>
-    <li class="cont-li">
-      <a href="#4" class="cont-link"
-        ><img src="./images/europe.png" alt="" />Europe</a
-      >
-    </li>
-    <li class="cont-li">
-      <a href="#5" class="cont-link"
-        ><img src="./images/australia.png" alt="" />Australia</a
-      >
-    </li>
-    <li class="cont-li">
-      <a href="#6" class="cont-link"
-        ><img src="./images/south-america.png" alt="" />South America</a
-      >
-    </li>
-    <li class="cont-li">
-      <a href="#7" class="cont-link"
-        ><img src="./images/africa.png" alt="" />Africa</a
-      >
-    </li>
   </ul>
   <div class="parent-prices">
     <div class="hotel-prices">
@@ -346,51 +298,6 @@ At the third section i have list with small images. With 4 divs after it, which 
         <a href="#" class="btn-price">Continue reading</a>
       </div>
     </div>
-
-    <div class="hotel-prices">
-      <img src="./images/tm-img-04.jpg " alt="" />
-      <div class="mid-text">
-        <h3 class="hotel-name">Hotel meow</h3>
-        <p class="hotel-location">Paris</p>
-        <p class="hotel-description">
-          Here u can book rooms for very cheap and feel so happy
-        </p>
-      </div>
-      <div class="right-prices">
-        <p class="price">450$</p>
-        <a href="#" class="btn-price">Continue reading</a>
-      </div>
-    </div>
-
-    <div class="hotel-prices">
-      <img src="./images/tm-img-05.jpg " alt="" />
-      <div class="mid-text">
-        <h3 class="hotel-name">Hotel meow</h3>
-        <p class="hotel-location">Paris</p>
-        <p class="hotel-description">
-          Here u can book rooms for very cheap and feel so happy
-        </p>
-      </div>
-      <div class="right-prices">
-        <p class="price">450$</p>
-        <a href="#" class="btn-price">Continue reading</a>
-      </div>
-    </div>
-    <div class="hotel-prices">
-      <img src="./images/tm-img-06.jpg " alt="" />
-      <div class="mid-text">
-        <h3 class="hotel-name">Hotel meow</h3>
-        <p class="hotel-location">Paris</p>
-        <p class="hotel-description">
-          Here u can book rooms for very cheap and feel so happy
-        </p>
-      </div>
-      <div class="right-prices">
-        <p class="price">450$</p>
-        <a href="#" class="btn-price">Continue reading</a>
-      </div>
-    </div>
-    <a href="#" class="btn-section-three"> See more offers</a>
   </div>
 </section>
 ```
@@ -439,7 +346,6 @@ My container class is max-width of 85rem, which i found it as a best practice fo
   --grey: #e6e6e6;
 
 }
-
 *,
 *::before,
 *::after {
