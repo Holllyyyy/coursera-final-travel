@@ -19,9 +19,12 @@ This project is built with HTML5, CSS3 and JavaScript.
 
 ### Screenshot
 
-![validator](validatorhtml.png)
-![mobile](ss-mobile.jpg)
-![desktop](ss-desktop.png)
+![validator](ss/validatorhtml.png)
+![wave](ss/ave.png)
+![desktop](ss/ss-desktop-first.png)
+![desktop](ss/ss-desktop-second.png)
+![desktop](ss/ss-desktop-third.png)
+![desktop](ss/ss-desktop-fourth.png)
 
 ### Links
 
