@@ -5,6 +5,58 @@ navToggle.addEventListener('click', () => {
     nav.classList.toggle('nav--visible');
 })
 
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+// current slide counter
+let curSlide = 0;
+// select next slide button
+const nextSlide = document.querySelector(".btn-right");
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+    //   move slide by -100%
+
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    });
+  });
+  
+  // select prev slide button
+const prevSlide = document.querySelector(".btn-left");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+
+
+
+
+/*
 const europeOne = {
     images: "./images/europe-top-attractions-eiffel-tower.jpg",
     description: "The Eiffel Tower is one of France's most famous sights. Sitting in the heart of the Champ de Mars in Paris, the wrought-iron tower was originally built to serve as the entrance to the 1889 World's Fair. Engineer Gustave Eiffel received much criticism for his design, with people calling it a monstrosity and an impossible task - at the time of construction, the 324-meter-tall tower (equivalent to an 81-story building) was the tallest structure in the world.",
@@ -37,3 +89,4 @@ const africaTwo = {
     description: "Watching the sun rise or set over the Pyramids of Giza in Egypt from the back of a camel is an experience you will never forget. The pyramids and the Great Sphinx date back to the 26th century BCE and are Egypts most iconic attractions. The Pyramids of Giza are easy to access from Egypt's capital and  largest city, Cairo, which is equally fascinating to visit. Set on the banks of the Nile River, Cairo is a chaotic and buzzy place that appears to never slow down, even in the dead of night. Here, ancient history meets a modern metropolis and there is much to see and do, with a visit to the Egyptian Museum at the top of most lists.",
     more: "https://www.planetware.com/tourist-attractions-/pyramids-of-giza-egy-giza-giza.htm"
 }   
+*/
