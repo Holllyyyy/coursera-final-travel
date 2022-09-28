@@ -311,7 +311,7 @@ antarctica.addEventListener('click', function(){
    hotelNameFirst.innerText="Whichaway Camp"
    hotelLocationFirst.innerHTML="Antarctica"
    hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Antarctica."
-   priceFirst.innerHTML="6000$"
+   priceFirst.innerHTML="60000$"
    hotelImgFirst.src="./images/download (7).jfif"
    //second image
    hotelNameSecond.innerText="Adventure ship"
