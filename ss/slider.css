@@ -125,6 +125,7 @@ img {
         color: var(--white);
         border: none;
         margin-top: -550px;
+
     }
 
     .btn-right {
@@ -151,6 +152,7 @@ img {
         background-color: var(--pink);
         z-index: 1;
     }
+
 
     .btn-left-pink {
         z-index: 1;

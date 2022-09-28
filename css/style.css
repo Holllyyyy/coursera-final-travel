@@ -144,7 +144,9 @@ header {
 .logo {
   width: 100px;
   height: auto;
+
 }
+
 
 .logo::after {
   width: 100%;
@@ -158,6 +160,7 @@ header {
 @media (max-width: 34rem) {
   .logo-title {
     font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     display: flex;
     justify-self: start;
@@ -375,10 +378,6 @@ input {
   font-family: sans-serif;
 }
 
-.btn-parent {
-  padding-bottom: 3rem;
-}
-
 .btn-circle {
   background-color: var(--green);
   border-radius: 50%;
@@ -387,6 +386,7 @@ input {
   color: var(--white);
   padding: 10px 15px;
   border: none;
+  margin-bottom: 5px;
 }
 
 .btn-circle:hover {
@@ -440,24 +440,38 @@ button {
 
 /*SECTION TWO sllder*/
 /*Mobile view*/
-img {
-  max-width: 100%;
-  display: block;
-}
 
 .section-two,
 .section-three {
   background-color: var(--white);
   max-width: 85rem;
   margin-inline: auto;
+
+}
+
+/*Mobile view*/
+.img {
+  max-width: 100%;
+  display: block;
+  height: 15rem;
+}
+
+/*  DEKTOP VIEW */
+@media (min-width:34rem) {
+  .img {
+    max-width: 100%;
+    display: block;
+    height: 25rem;
+  }
 }
 
 .slider {
+  overflow: hidden;
+  max-width: 85rem;
+  height: 35rem;
   position: relative;
   width: 100%;
-  max-width: 80rem;
-  height: 35rem;
-  overflow: hidden;
+
 }
 
 .slide {
@@ -466,58 +480,156 @@ img {
   transition: all 0.5s;
 }
 
-
-.parent-box-blue,
-.parent-box-pink {
+.parent-box-blue {
   color: var(--white);
-}
-
-.btn {
-  text-decoration: none;
-  background-color: var(--white);
-  color: var(--green);
-  padding: 0.5em 1em;
-
-}
-
-.btn:hover {
-  background-color: var(--pink);
-  color: var(--white);
-}
-
-.btn-pink {
-  text-decoration: none;
-  background-color: var(--white);
-  color: var(--pink);
-  padding: 0.5em 1em;
-}
-
-.btn-pink:hover {
   background-color: var(--green);
-  color: var(--white);
-}
-
-.blue-box {
-  background-color: var(--green);
-  padding: 1rem;
   text-align: start;
 }
 
-.pink-box {
-  background-color: var(--pink);
-  padding: 1rem;
-  text-align: start;
-}
 
-h3,
-p {
-  padding: 1rem;
-}
+/*mobile view*/
 
 @media (max-width:799px) {
-  .parent-button {
-    position: relative;
+  .parent-box-blue {
+    margin-top: -315px;
   }
+
+  h3,
+  p {
+    padding: 1rem;
+  }
+
+  .btn-left {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -550px;
+
+  }
+
+  .btn-right {
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    position: absolute;
+    margin-top: -550px;
+    margin-left: 3rem;
+  }
+
+  .btn-left:hover,
+  .btn-right:hover {
+    background-color: var(--green);
+    border: none;
+  }
+
+  /*pink*/
+
+  .parent-box-pink {
+    background-color: var(--pink);
+    z-index: 1;
+  }
+
+
+  .btn-left-pink {
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -45rem;
+    margin-left: 0;
+  }
+
+  .btn-right-pink {
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    position: absolute;
+    margin-top: -45rem;
+    margin-left: 3rem;
+  }
+
+  .btn-left-pink:hover,
+  .btn-right-pink:hover {
+    background-color: var(--pink);
+    border: none;
+  }
+
+  .slider-second {
+    overflow: hidden;
+  }
+
+  .slider-three,
+  .slider-two,
+  .slider-third {
+    display: block;
+    overflow: hidden;
+  }
+
+  .slide-third {
+    overflow: hidden;
+
+  }
+
+  .btn-left-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -44rem;
+
+  }
+
+  .slider-three {
+    margin-top: -30rem;
+  }
+
+  .btn-right-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    margin-left: 3rem;
+    margin-top: -44rem;
+  }
+
+  .parent-blue-box-third {
+    color: var(--white);
+    background-color: var(--green);
+    padding: 1rem;
+    width: 100%;
+    margin-top: -30rem;
+  }
+
+  .btn-left-third:hover,
+  .btn-right-third:hover {
+    background-color: var(--green);
+    border: none;
+  }
+
+}
+
+
+@media (max-width:799px) {
+
 
   .btn-left {
     position: absolute;
@@ -586,23 +698,30 @@ p {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 7px 0px rgb(214 214 214);
-  }
-
-  .first-picture,
-  .second-picture {
-    display: flex;
-    justify-content: space-between;
-    max-width: 80rem;
+    max-width: 85rem;
     width: 100%;
     margin: auto;
-    overflow: hidden;
-
   }
 
-  .parent-box-blue,
-  .parent-box-pink {
+  .first-slider {
+    display: flex;
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  .parent-box-blue {
+    z-index: 1;
     align-self: center;
     justify-self: center;
+    width: 100%;
+    padding: 3rem 5rem;
+    text-align: start;
+    margin-left: -10rem;
+    margin-bottom: 9rem;
   }
 
   h3,
@@ -610,34 +729,8 @@ p {
     padding: 1rem 0;
   }
 
-  .blue-box {
-    width: 100%;
-    padding: 2rem 5rem;
-    text-align: start;
-    margin-left: -3rem;
-
-  }
-
-  .parent-box-pink {
-    max-width: 100%;
-    font-weight: 500;
-  }
-
-  .pink-box {
-    width: 95%;
-    padding: 3rem 7rem;
-    margin-left: 5rem;
-  }
-
-  .second-picture {
-    flex-direction: row-reverse;
-  }
-
-  .parent-button {
-    position: absolute;
-  }
-
   .btn-left {
+    position: absolute;
     left: 0;
     z-index: 1;
     height: 40px;
@@ -645,17 +738,20 @@ p {
     background: rgba(0, 0, 0, 0.7);
     color: var(--white);
     border: none;
-    margin-left: -200px;
-    margin-top: 50px;
+    margin-left: 550px;
+    margin-top: 170px;
   }
 
   .btn-right {
+    position: absolute;
     z-index: 1;
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
     border: none;
     color: var(--white);
+    margin-left: 520px;
+    margin-top: 170px;
   }
 
   .btn-left:hover,
@@ -664,15 +760,49 @@ p {
     border: none;
   }
 
+  /*Slider second*/
+  .slider-two {
+    display: flex;
+  }
+
+  .slider-second {
+    display: flex;
+    overflow: hidden;
+
+    height: 35rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .slide-second {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+  }
+
+  /*pink*/
+
+  .parent-box-pink {
+    background-color: var(--pink);
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    z-index: 1;
+    padding: 3rem 5rem;
+    margin-top: -10rem;
+    margin-right: -3rem;
+  }
+
   .btn-left-pink {
     z-index: 1;
+    position: absolute;
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.7);
     color: var(--white);
     border: none;
-    margin-left: 47px;
-    margin-top: 190px;
+    margin-top: 10rem;
+    margin-left: 47rem;
   }
 
   .btn-right-pink {
@@ -682,6 +812,9 @@ p {
     background: rgba(0, 0, 0, 0.7);
     border: none;
     color: var(--white);
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 50rem;
   }
 
   .btn-left-pink:hover,
@@ -689,6 +822,67 @@ p {
     background-color: var(--pink);
     border: none;
   }
+
+  .slider-three {
+    display: flex;
+  }
+
+  .slider-third {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 70rem;
+    height: 35rem;
+  }
+
+  .slide-third {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+  }
+
+  .parent-blue-box-third {
+    color: var(--white);
+    background-color: var(--green);
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    padding: 3rem 5rem;
+    margin-left: -10rem;
+    margin-bottom: 8rem;
+  }
+
+  .btn-left-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-left: 29rem;
+    margin-top: 170px;
+  }
+
+  .btn-right-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    margin-left: 518px;
+    margin-top: 170px;
+  }
+
+  .btn-left-third:hover,
+  .btn-right-third:hover {
+    background-color: var(--green);
+    border: none;
+  }
+
 
   .continents {
     background-color: var(--green);
@@ -770,6 +964,7 @@ p {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
+  padding: 1.70rem;
 }
 
 .btn-price {
@@ -801,6 +996,14 @@ p {
 
 /*PRICES DESKTOP VIEW*/
 @media (min-width:800px) {
+
+  .first-hotel-img,
+  .second-hotel-img,
+  .third-hotel-img {
+    width: 17rem;
+    height: 11rem;
+  }
+
   .hotel-prices {
     display: flex;
     flex-direction: row;

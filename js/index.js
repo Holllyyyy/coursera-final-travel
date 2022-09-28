@@ -4,7 +4,7 @@ navToggle.addEventListener('click', () => {
 
     nav.classList.toggle('nav--visible');
 })
-
+//first picture
 // Select all slides
 const slides = document.querySelectorAll(".slide");
 
@@ -52,41 +52,282 @@ prevSlide.addEventListener("click", function () {
   });
 });
 
+//second picture
+
+// Select all slides
+const slidesTwo = document.querySelectorAll(".slide-second");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slidesTwo.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+// current slide counter
+let currentSlide = 0;
+// select next slide button
+const slideRight = document.querySelector(".btn-right-second");
+// maximum number of slides
+let maximumSlide = slidesTwo.length - 1;
+
+// add event listener and navigation functionality
+slideRight.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (currentSlide === maximumSlide) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+    //   move slide by -100%
+
+    slidesTwo.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - currentSlide)}%)`;
+    });
+  });
+  
+  // select prev slide button
+const slideLeft = document.querySelector(".btn-left-second");
+
+// add event listener and navigation functionality
+slideLeft.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (currentSlide === 0) {
+    currentSlide = maximumSlide;
+  } else {
+    currentSlide--;
+  }
+
+  //   move slide by 100%
+  slidesTwo.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - currentSlide)}%)`;
+  });
+});
+
+
+//THIRD SLIDER
+
+// Select all slides
+const slidesThird = document.querySelectorAll(".slide-third");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slidesThird.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+// current slide counter
+let cuSlide = 0;
+// select next slide button
+const neSlide = document.querySelector(".btn-right-third")
+// maximum number of slides
+let maSlide = slidesThird.length - 1;
+
+// add event listener and navigation functionality
+neSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (cuSlide === maSlide) {
+    cuSlide = 0;
+  } else {
+    cuSlide++;
+  }
+    //   move slide by -100%
+
+    slidesThird.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - cuSlide)}%)`;
+    });
+  });
+  
+  // select prev slide button
+const preSlide = document.querySelector(".btn-left-third");
+
+// add event listener and navigation functionality
+preSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (cuSlide === 0) {
+    cuSlide = maSlide;
+  } else {
+    cuSlide--;
+  }
+  //   move slide by 100%
+  slidesThird.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - cuSlide)}%)`;
+  });
+});
+
+const antarctica=document.querySelector(".antarctica");
+const asia=document.querySelector(".asia");
+const northAmerica=document.querySelector(".north-america");
+const europe=document.querySelector(".europe");
+const australia=document.querySelector(".australia");
+const southAmerica=document.querySelector(".south-america");
+const africa=document.querySelector(".africa");
+const container=document.querySelector(".parent-prices");
+//first image
+const hotelImgFirst=document.querySelector(".first-hotel-img")
+const midTextFirst=document.querySelector('.mid-text-first')
+const hotelNameFirst=document.querySelector('.hotel-name-first')
+const hotelLocationFirst=document.querySelector('.hotel-location-first')
+const hotelDescriptionFirst=document.querySelector('.hotel-description-first')
+const priceFirst=document.querySelector('.price-first')
+//second
+const hotelImgSecond=document.querySelector(".second-hotel-img")
+const midTextSecond=document.querySelector('.mid-text-second')
+const hotelNameSecond=document.querySelector('.hotel-name-second')
+const hotelLocationSecond=document.querySelector('.hotel-location-second')
+const hotelDescriptionSecond=document.querySelector('.hotel-description-second')
+const priceSecond=document.querySelector('.price-second')
+//third
+const hotelImgThird=document.querySelector(".third-hotel-img")
+const midTextTird=document.querySelector('.mid-text-third')
+const hotelNameThird=document.querySelector('.hotel-name-third')
+const hotelLocationThird=document.querySelector('.hotel-location-third')
+const hotelDescriptionThird=document.querySelector('.hotel-description-third')
+const priceThird=document.querySelector('.price-third')
+
+//add event listener to continents
+
+africa.addEventListener('click', function(){
+  //first image
+  hotelNameFirst.innerText="La Mamounia Hotel "
+hotelLocationFirst.innerHTML="Marakesh"
+hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Marakesh."
+priceFirst.innerHTML="220$"
+hotelImgFirst.src="./images/lamamonia.jfif"
+//second image
+hotelNameSecond.innerText="Sofitel Cairo"
+hotelLocationSecond.innerHTML="Cairo"
+hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Cairo"
+priceSecond.innerHTML="120$"
+hotelImgSecond.src="./images/sofitel-cairo.jfif"
+//third image
+hotelNameThird.innerText="Ol Jogi"
+hotelLocationThird.innerHTML="Il polei"
+hotelDescriptionThird.innerHTML="Book now to spend amazing days in Kenya";
+priceThird.innerHTML="310$";
+hotelImgThird.src="./images/kenya.jfif"
+})
+//europe
+europe.addEventListener('click', function(){
+  //first image
+  hotelNameFirst.innerText="Sheraton Rhodes"
+hotelLocationFirst.innerHTML="Ixia"
+hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Ixia."
+priceFirst.innerHTML="250$"
+hotelImgFirst.src="./images/download (1).jfif"
+//second image
+hotelNameSecond.innerText="Hard Rock Hotel"
+hotelLocationSecond.innerHTML="Madrid"
+hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Madrid"
+priceSecond.innerHTML="330$"
+hotelImgSecond.src="./images/images (1).jfif"
+//third image
+hotelNameThird.innerText="Icehotel"
+hotelLocationThird.innerHTML="Jukkasjärvi"
+hotelDescriptionThird.innerHTML="Book now to spend amazing days in Sweeden."
+priceThird.innerHTML="450$";
+hotelImgThird.src="./images/download (2).jfif"
+})
+northAmerica.addEventListener('click', function(){
+    //first image
+    hotelNameFirst.innerText="Chateau Laurier"
+    hotelLocationFirst.innerHTML="Ottawa"
+    hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Ottawa."
+    priceFirst.innerHTML="200$"
+    hotelImgFirst.src="./images/ottawa.jfif"
+    //second image
+    hotelNameSecond.innerText="Fairmont Hotel"
+    hotelLocationSecond.innerHTML="Vancouver"
+    hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Vancouver"
+    priceSecond.innerHTML="330$"
+    hotelImgSecond.src="./images/fairmount.jfif"
+    //third image
+    hotelNameThird.innerText="Niagara Falls M"
+    hotelLocationThird.innerHTML="Niagara Falls"
+    hotelDescriptionThird.innerHTML="Book now to spend amazing days in Niagara Falls."
+    priceThird.innerHTML="400$";
+    hotelImgThird.src="./images/niagara.jfif"
+
+})
+australia.addEventListener('click', function(){
+   //first image
+   hotelNameFirst.innerText="Hilton hotel Sydney"
+   hotelLocationFirst.innerHTML="Sydney"
+   hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Sydney."
+   priceFirst.innerHTML="200$"
+   hotelImgFirst.src="./images/sydney.jfif"
+   //second image
+   hotelNameSecond.innerText="Holiday Inn"
+   hotelLocationSecond.innerHTML="Melbourne"
+   hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Melbourne"
+   priceSecond.innerHTML="430$"
+   hotelImgSecond.src="./images/melburn.jfif"
+   //third image
+   hotelNameThird.innerText="Turtle Beach Resort"
+   hotelLocationThird.innerHTML="Gold Coast"
+   hotelDescriptionThird.innerHTML="Book now to spend amazing days in Gold Coast."
+   priceThird.innerHTML="460$";
+   hotelImgThird.src="./images/turtle.jfif"
+
+})
+southAmerica.addEventListener('click', function(){
+   //first image
+   hotelNameFirst.innerText="Hotel Intel Brazil"
+   hotelLocationFirst.innerHTML="Brazil"
+   hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Brazil."
+   priceFirst.innerHTML="220$"
+   hotelImgFirst.src="./images/brazil.jfif"
+   //second image
+   hotelNameSecond.innerText="Raddison Blue Hotel"
+   hotelLocationSecond.innerHTML="Concon"
+   hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Concon"
+   priceSecond.innerHTML="200$"
+   hotelImgSecond.src="./images/concon.jfif"
+   //third image
+   hotelNameThird.innerText="Palladio Hotel"
+   hotelLocationThird.innerHTML="Buenos Aires"
+   hotelDescriptionThird.innerHTML="Book now to spend amazing days in Buenos Aires."
+   priceThird.innerHTML="300$";
+   hotelImgThird.src="./images/download (3).jfif"
+})
+asia.addEventListener('click', function(){
+   //first image
+   hotelNameFirst.innerText="Ej Anime Hotel"
+   hotelLocationFirst.innerHTML="Japan"
+   hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Japan."
+   priceFirst.innerHTML="220$"
+   hotelImgFirst.src="./images/download (4).jfif"
+   //second image
+   hotelNameSecond.innerText="Golden Temple"
+   hotelLocationSecond.innerHTML="Slem Reap"
+   hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Slem Reap"
+   priceSecond.innerHTML="100$"
+   hotelImgSecond.src="./images/download (5).jfif"
+   //third image
+   hotelNameThird.innerText="China Hotel"
+   hotelLocationThird.innerHTML="Guangzhou"
+   hotelDescriptionThird.innerHTML="Book now to spend amazing days in Guangzhou."
+   priceThird.innerHTML="200$";
+   hotelImgThird.src="./images/download (6).jfif"
+
+})
+antarctica.addEventListener('click', function(){
+   //first image
+   hotelNameFirst.innerText="Whichaway Camp"
+   hotelLocationFirst.innerHTML="Antarctica"
+   hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Antarctica."
+   priceFirst.innerHTML="6000$"
+   hotelImgFirst.src="./images/download (7).jfif"
+   //second image
+   hotelNameSecond.innerText="Adventure ship"
+   hotelLocationSecond.innerHTML="Antarctica"
+   hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Antarctica"
+   priceSecond.innerHTML="60000$"
+   hotelImgSecond.src="./images/download (8).jfif"
+   //third image
+   hotelNameThird.innerText="Ocean Nova"
+   hotelLocationThird.innerHTML="Antarctica"
+   hotelDescriptionThird.innerHTML="Book now to spend amazing days in Antarctica."
+   priceThird.innerHTML="60000$";
+   hotelImgThird.src="./images/download (9).jfif"
+})
 
 
 
 
-/*
-const europeOne = {
-    images: "./images/europe-top-attractions-eiffel-tower.jpg",
-    description: "The Eiffel Tower is one of France's most famous sights. Sitting in the heart of the Champ de Mars in Paris, the wrought-iron tower was originally built to serve as the entrance to the 1889 World's Fair. Engineer Gustave Eiffel received much criticism for his design, with people calling it a monstrosity and an impossible task - at the time of construction, the 324-meter-tall tower (equivalent to an 81-story building) was the tallest structure in the world.",
-    more: "https://www.planetware.com/tourist-attractions-/paris-f-p-paris.htm"
-}
-const europeTwo = {
-    images: "./images/europe-top-attractions-acropolis-athens-greece.jpg",
-    description: "Watching over Athens from atop a rocky outcrop, the ancient citadel is one of Greece's most famous tourist destinations. The Acropolis' most famous buildings were all constructed in the fifth century BC under the watchful eye of statesman and general Pericles. The heart of the Acropolis is the Parthenon, a temple built to thank the gods for the victory over Persian invaders though it also served as the city treasury for a time. Other prominent buildings include the gateway Propylaea (which serves as the entrance to Acropolis, the Erechtheion Temple (dedicated to Athena and Poseidon), and the tiny but beautiful Temple of Athena Nike.",
-    more: "https://www.planetware.com/tourist-attractions-/athens-gr-ath-ath.htm)"
-}
-const asiaOne = {
-    images: "./images/asia-best-places-to-visit-dead-sea-israel-city.jpg",
-    description: "The dark blue waters of the Dead Sea touch the borders of both Jordan and Israel. Actually a lake despite its name, the Dead Sea sits at the lowest land elevation on Earth over 430 meters below sea level. With a salt concentration of around 31 percent almost 10 times saltier than the ocean the Dead Sea is so thick, nothing can sink into it, and everyone who walks into it will naturally float.",
-    more: "https://www.planetware.com/tourist-attractions-/dead-sea-isr-st-ds.htm"
-}
-const asiaTwo = {
-    images: "./images/asia-best-places-to-visit-phuket-thailand.jpg",
-    description: "Thailand's biggest island is also a magnet for visitors and for good reason. Phuket boasts some of the best beaches in the country, with clean, soft, rolling sands and turquoise waters as far as the eye can see. Kata, Hat Karon, and Kamala beaches see a lot of tourists during the high season (November to February) but remain sleepy little villages once the rains arrive. Beautiful coral reefs line up the coastline, offering amazing opportunities for snorkeling and diving but also sea kayaking and island hopping.",
-    more: "https://www.planetware.com/rome/colosseum-i-la-rcl.htm"
-}
 
-const africaOne = {
-    images: "./images/africa-best-places=to-visit-in-time-zanzibar-tanzania.jpg",
-    description: "A visit to Zanzibar feels like stepping into another world, one where time stands still, and the only city, Stone Town, is a UNESCO World Heritage Site. The island in the Indian Ocean just off the coast of Tanzania is a place where Arab dhows or fishing boats still ply the picture perfect turquoise sea, and you can get lost in the beauty of Stone Town, wandering its narrow alleys past old mosques, vibrant bazaars, and riads with intricately carved doorways.",
-    more: "https://www.planetware.com/africa/best-places-to-visit-saf-1-36.htm"
-}
-
-const africaTwo = {
-    images: "./images/africa-best-places=to-visit-great-pyramids-cairo-egypt.jpg",
-    description: "Watching the sun rise or set over the Pyramids of Giza in Egypt from the back of a camel is an experience you will never forget. The pyramids and the Great Sphinx date back to the 26th century BCE and are Egypts most iconic attractions. The Pyramids of Giza are easy to access from Egypt's capital and  largest city, Cairo, which is equally fascinating to visit. Set on the banks of the Nile River, Cairo is a chaotic and buzzy place that appears to never slow down, even in the dead of night. Here, ancient history meets a modern metropolis and there is much to see and do, with a visit to the Egyptian Museum at the top of most lists.",
-    more: "https://www.planetware.com/tourist-attractions-/pyramids-of-giza-egy-giza-giza.htm"
-}   
-*/
