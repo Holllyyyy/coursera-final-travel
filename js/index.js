@@ -311,19 +311,19 @@ antarctica.addEventListener('click', function(){
    hotelNameFirst.innerText="Whichaway Camp"
    hotelLocationFirst.innerHTML="Antarctica"
    hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Antarctica."
-   priceFirst.innerHTML="60000$"
+   priceFirst.innerHTML="600$"
    hotelImgFirst.src="./images/download (7).jfif"
    //second image
    hotelNameSecond.innerText="Adventure ship"
    hotelLocationSecond.innerHTML="Antarctica"
    hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Antarctica"
-   priceSecond.innerHTML="60000$"
+   priceSecond.innerHTML="600$"
    hotelImgSecond.src="./images/download (8).jfif"
    //third image
    hotelNameThird.innerText="Ocean Nova"
    hotelLocationThird.innerHTML="Antarctica"
    hotelDescriptionThird.innerHTML="Book now to spend amazing days in Antarctica."
-   priceThird.innerHTML="60000$";
+   priceThird.innerHTML="600$";
    hotelImgThird.src="./images/download (9).jfif"
 })
 
