@@ -145,42 +145,28 @@
       <a href="#" class="aside-btn"> Explore more</a>
     </aside>
 
-    <section id="top" class="section-two">
-      <div class="first-slider">
-        <div class="slider">
-          <figure class="figure-first slide">
-            <img
-              class="img"
-              src="./images/europe-top-attractions-colosseum-rome.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide">
-            <img
-              class="img"
-              src="./images/europe-top-attractions-acropolis-athens-greece.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide">
-            <img
-              class="img"
-              src="./images/europe-top-attractions-eiffel-tower.jpg"
-              alt=""
-            />
-          </figure>
-        </div>
-
-        <button id="btnLeft" class="btn-left" aria-hidden="true">
+    <section id="top" class="slider-wrapper section-two">
+      <div class="slider-first">
+        <ul class="slides-container slider" id="slides-container">
+          <li class="figure-first slide">
+            <img class="img" src="./images/europe-top-attractions-colosseum-rome.jpg" alt="" />
+          </li>
+          <li class="figure-first slide">
+            <img  class="img" src="./images/europe-top-attractions-eiffel-tower.jpg" alt="" />
+          </li>
+          <li class="figure-first slide">
+            <img  class="img" src="./images/europe-top-attractions-acropolis-athens-greece.jpg" alt="" />
+          </li>
+        </ul>
+        <button class="slide-arrow btn-left" aria-hidden="true" id="slide-arrow-prev">
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-
-        <button id="btnRight" class="btn-right" aria-hidden="true">
+  
+        <button class="slide-arrow btn-right" aria-hidden="true" id="slide-arrow-next">
           <i class="fa-solid fa-circle-arrow-right"> </i>
           <span class="visually-hidden">Button right</span>
         </button>
-
         <div class="parent-box-blue">
           <h3>Europe's most visited places</h3>
           <p>
@@ -189,7 +175,7 @@
           </p>
         </div>
       </div>
-      <div class="slider-two">
+      <div class="second-slider">
         <div class="parent-box-pink">
           <h3>Asian's most visited places</h3>
           <p>
@@ -197,74 +183,52 @@
             since 1708.
           </p>
         </div>
-        <div class="slider-second">
-          <figure class="figure-first slide-second">
-            <img
-              class="img"
-              src="./images/asia-best-places-to-visit-mount-fuji-japan.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide-second">
-            <img
-              class="img"
-              src="./images/asia-best-places-to-visit-dead-sea-israel-city.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide-second">
-            <img
-              class="img"
-              src="./images/asia-best-places-to-visit-phuket-thailand.jpg"
-              alt=""
-            />
-          </figure>
-        </div>
-
-        <button class="btn-left-pink btn-left-second" aria-hidden="true">
+        <ul class="slides-container-second" id="slides-container-second">
+          <li class="figure-first slide-two">
+            <img class="img" src="./images/asia-best-places-to-visit-mount-fuji-japan.jpg" alt="" />
+          </li>
+          <li class="figure-first slide-two">
+            <img class="img" src="./images/asia-best-places-to-visit-phuket-thailand.jpg" alt="" />
+          </li>
+          <li class="figure-first slide-two">
+            <img class="img" src="./images/asia-best-places-to-visit-dead-sea-israel-city.jpg" alt="" />
+          </li>
+        </ul>
+        <button class="btn-left-pink btn-left-second" aria-hidden="true" id="slide-arrow-second">
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-        <button class="btn-right-pink btn-right-second" aria-hidden="true">
+  
+        <button class="slide-arrow-second btn-right-pink btn-right-second" aria-hidden="true"
+          id="slide-arrow-next-second">
           <i class="fa-solid fa-circle-arrow-right"></i>
           <span class="visually-hidden">Button right</span>
         </button>
+  
       </div>
-
-      <div class="slider-three">
-        <div class="slider-third">
-          <figure class="figure-first slide-third">
-            <img
-              class="img"
-              src="./images/africa-best-places-to-visit-back-in-time-zanzibar-tanzania.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide-third">
-            <img
-              class="img"
-              src="./images/africa-best-places-to-visit-cape-town-south-africa.jpg"
-              alt=""
-            />
-          </figure>
-          <figure class="figure-first slide-third">
-            <img
-              class="img"
-              src="./images/africa-best-places-to-visit-great-pyramids-cairo-egypt.jpg"
-              alt=""
-            />
-          </figure>
-        </div>
-
-        <button class="btn-left-third" aria-hidden="true">
+  
+      <div class="slider-third">
+        <ul class="slides-container-third" id="slides-container-third">
+          <li class="figure-first slide-three">
+            <img class="img" src="./images/africa-best-places-to-visit-back-in-time-zanzibar-tanzania.jpg" alt="" />
+          </li>
+          <li class="figure-first slide-three">
+            <img class="img" src="./images/africa-best-places-to-visit-cape-town-south-africa.jpg" alt="" />
+          </li>
+          <li class="figure-first slide-three">
+            <img class="img" src="./images/africa-best-places-to-visit-great-pyramids-cairo-egypt.jpg" alt="" />
+          </li>
+        </ul>
+  
+        <button class="btn-left-third" id="slide-arrow-third" aria-hidden="true">
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-        <button class="btn-right-third" aria-hidden="true">
+  
+        <button class="btn-right-third" id="slide-arrow-next-third">
           <i class="fa-solid fa-circle-arrow-right"></i>
           <span class="visually-hidden">Button right</span>
         </button>
-
         <div class="parent-blue-box-third">
           <h3>Africa's most visited places</h3>
           <p>
@@ -272,6 +236,7 @@
             and Zanzibar.
           </p>
         </div>
+      </div>
       </div>
     </section>
     <section id="places" class="section-three">

@@ -449,12 +449,73 @@ button {
 
 }
 
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container {
+  height: 35rem;
+  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.slides-container-second {
+  height: 35rem;
+  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-two {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.slides-container-third {
+  height: 35rem;
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-three {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
 /*Mobile view*/
 .img {
   max-width: 100%;
   display: block;
   height: 15rem;
 }
+
 
 /*  DEKTOP VIEW */
 @media (min-width:34rem) {
@@ -465,7 +526,13 @@ button {
   }
 }
 
-.slider {
+.parent-box-blue {
+  color: var(--white);
+  background-color: var(--green);
+  text-align: start;
+}
+
+/*.slider {
   overflow: hidden;
   max-width: 85rem;
   height: 35rem;
@@ -485,11 +552,13 @@ button {
   background-color: var(--green);
   text-align: start;
 }
-
+*/
 
 /*mobile view*/
 
 @media (max-width:799px) {
+
+
   .parent-box-blue {
     margin-top: -315px;
   }
@@ -530,6 +599,11 @@ button {
   }
 
   /*pink*/
+  #slides-container-second {
+    max-height: 40vh;
+
+  }
+
 
   .parent-box-pink {
     background-color: var(--pink);
@@ -545,7 +619,7 @@ button {
     background: rgba(0, 0, 0, 0.7);
     color: var(--white);
     border: none;
-    margin-top: -45rem;
+    margin-top: -10rem;
     margin-left: 0;
   }
 
@@ -557,7 +631,7 @@ button {
     border: none;
     color: var(--white);
     position: absolute;
-    margin-top: -45rem;
+    margin-top: -10rem;
     margin-left: 3rem;
   }
 
@@ -565,22 +639,6 @@ button {
   .btn-right-pink:hover {
     background-color: var(--pink);
     border: none;
-  }
-
-  .slider-second {
-    overflow: hidden;
-  }
-
-  .slider-three,
-  .slider-two,
-  .slider-third {
-    display: block;
-    overflow: hidden;
-  }
-
-  .slide-third {
-    overflow: hidden;
-
   }
 
   .btn-left-third {
@@ -591,12 +649,8 @@ button {
     background: rgba(0, 0, 0, 0.7);
     color: var(--white);
     border: none;
-    margin-top: -44rem;
-
-  }
-
-  .slider-three {
     margin-top: -30rem;
+
   }
 
   .btn-right-third {
@@ -608,7 +662,7 @@ button {
     border: none;
     color: var(--white);
     margin-left: 3rem;
-    margin-top: -44rem;
+    margin-top: -30rem;
   }
 
   .parent-blue-box-third {
@@ -616,7 +670,7 @@ button {
     background-color: var(--green);
     padding: 1rem;
     width: 100%;
-    margin-top: -30rem;
+    margin-top: -20rem;
   }
 
   .btn-left-third:hover,
@@ -625,69 +679,6 @@ button {
     border: none;
   }
 
-}
-
-
-@media (max-width:799px) {
-
-
-  .btn-left {
-    position: absolute;
-    z-index: 1;
-    height: 40px;
-    width: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    border: none;
-    margin-top: -550px;
-  }
-
-  .btn-right {
-    z-index: 1;
-    height: 40px;
-    width: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    border: none;
-    color: var(--white);
-    position: absolute;
-    margin-top: -550px;
-    margin-left: 3rem;
-  }
-
-  .btn-left:hover,
-  .btn-right:hover {
-    background-color: var(--green);
-    border: none;
-  }
-
-  .btn-left-pink {
-    z-index: 1;
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    border: none;
-    margin-top: 1rem;
-  }
-
-  .btn-right-pink {
-    z-index: 1;
-    height: 40px;
-    width: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    border: none;
-    color: var(--white);
-    position: absolute;
-    margin-top: 1rem;
-    margin-left: 3rem;
-  }
-
-  .btn-left-pink:hover,
-  .btn-right-pink:hover {
-    background-color: var(--pink);
-    border: none;
-  }
 }
 
 /*DESKTOP VIEW*/
@@ -703,15 +694,10 @@ button {
     margin: auto;
   }
 
-  .first-slider {
+  .slider-first {
     display: flex;
+    width: 100%;
   }
-
-  .slider {
-    position: relative;
-    overflow: hidden;
-  }
-
 
   .parent-box-blue {
     z-index: 1;
@@ -720,7 +706,7 @@ button {
     width: 100%;
     padding: 3rem 5rem;
     text-align: start;
-    margin-left: -10rem;
+    margin-left: -13em;
     margin-bottom: 9rem;
   }
 
@@ -738,7 +724,7 @@ button {
     background: rgba(0, 0, 0, 0.7);
     color: var(--white);
     border: none;
-    margin-left: 550px;
+    margin-left: 450px;
     margin-top: 170px;
   }
 
@@ -750,7 +736,7 @@ button {
     background: rgba(0, 0, 0, 0.7);
     border: none;
     color: var(--white);
-    margin-left: 520px;
+    margin-left: 495px;
     margin-top: 170px;
   }
 
@@ -761,24 +747,12 @@ button {
   }
 
   /*Slider second*/
-  .slider-two {
+  .second-slider {
     display: flex;
-  }
-
-  .slider-second {
-    display: flex;
-    overflow: hidden;
-
-    height: 35rem;
-    position: relative;
     width: 100%;
   }
 
-  .slide-second {
-    position: absolute;
-    width: 100%;
-    transition: all 0.5s;
-  }
+
 
   /*pink*/
 
@@ -823,22 +797,9 @@ button {
     border: none;
   }
 
-  .slider-three {
-    display: flex;
-  }
-
   .slider-third {
-    overflow: hidden;
-    position: relative;
+    display: flex;
     width: 100%;
-    max-width: 70rem;
-    height: 35rem;
-  }
-
-  .slide-third {
-    position: absolute;
-    width: 100%;
-    transition: all 0.5s;
   }
 
   .parent-blue-box-third {
@@ -895,6 +856,7 @@ button {
 
   .cont-li {
     padding: 30px 25px;
+    list-style: none;
   }
 }
 
@@ -903,6 +865,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
 .cont-link {
@@ -1123,6 +1086,7 @@ select[name="children"]:focus {
   border-radius: 4px;
   background-color: var(--white);
 }
+
 
 footer {
   display: flex;
