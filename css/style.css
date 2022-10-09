@@ -157,7 +157,7 @@ header {
 }
 
 /*MOBILE VIEW*/
-@media (max-width: 34rem) {
+@media (max-width: 688rem) {
   .logo-title {
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
@@ -312,7 +312,7 @@ input {
 }
 
 /* Form Desktop view*/
-@media (min-width:800px) {
+@media (min-width:992px) {
   .form {
     display: grid;
     gap: 1rem;
@@ -432,7 +432,7 @@ button {
 }
 
 /*Desktop view ASIDE*/
-@media (min-width:800px) {
+@media (min-width:992px) {
   .aside-heading {
     font-size: 200%;
   }
@@ -513,12 +513,12 @@ button {
 .img {
   max-width: 100%;
   display: block;
-  height: 15rem;
+
 }
 
 
 /*  DEKTOP VIEW */
-@media (min-width:34rem) {
+@media (min-width:992px) {
   .img {
     max-width: 100%;
     display: block;
@@ -556,7 +556,7 @@ button {
 
 /*mobile view*/
 
-@media (max-width:799px) {
+@media (max-width:688px) {
 
 
   .parent-box-blue {
@@ -600,8 +600,14 @@ button {
 
   /*pink*/
   #slides-container-second {
-    max-height: 40vh;
+    max-height: 30vh;
 
+  }
+  .slides-container-third{
+    max-height: 90vh;
+  }
+  .slides-container{
+    max-height: 90vh;
   }
 
 
@@ -680,10 +686,150 @@ button {
   }
 
 }
+/*TABLET VIEW*/
+@media (min-width:689px){
+  .nav--visible{
+    margin-left: 28rem;
+  }
+  .aside-btn{
+    margin-top: 1rem;
+  }
 
+  h3,
+  p {
+    padding: 1rem;
+  }
+
+  .btn-left {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -400px;
+  }
+
+  .btn-right {
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 3rem;
+  }
+
+  .btn-left:hover,
+  .btn-right:hover {
+    background-color: var(--green);
+    border: none;
+  }
+
+  /*pink*/
+  #slides-container-second {
+    max-height: 45vh;
+
+  }
+  .slides-container-third{
+    max-height: 45vh;
+  }
+  .slides-container{
+    max-height: 45vh;
+  }
+
+.parent-box-blue, .parent-blue-box-third{
+  padding: 2rem;
+}
+  .parent-box-pink {
+    background-color: var(--pink);
+    z-index: 1;
+    padding: 2rem;
+  }
+
+
+  .btn-left-pink {
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -25rem;
+    margin-left: 0;
+  }
+
+  .btn-right-pink {
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    position: absolute;
+    margin-top: -25rem;
+    margin-left: 3rem;
+  }
+
+  .btn-left-pink:hover,
+  .btn-right-pink:hover {
+    background-color: var(--pink);
+    border: none;
+  }
+
+  .btn-left-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    border: none;
+    margin-top: -25rem;
+
+  }
+
+  .btn-right-third {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--white);
+    margin-left: 3rem;
+    margin-top: -25rem;
+  }
+
+  .parent-blue-box-third {
+    color: var(--white);
+    background-color: var(--green);
+    width: 100%;
+  }
+
+  .btn-left-third:hover,
+  .btn-right-third:hover {
+    background-color: var(--green);
+    border: none;
+  }
+.parent-prices{
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.mid-text{
+  text-align: center;
+}
+
+
+}
 /*DESKTOP VIEW*/
 
-@media (min-width:800px) {
+@media (min-width:992px) {
 
   .section-two {
     display: flex;
@@ -958,7 +1104,7 @@ button {
 }
 
 /*PRICES DESKTOP VIEW*/
-@media (min-width:800px) {
+@media (min-width:992px) {
 
   .first-hotel-img,
   .second-hotel-img,
@@ -994,7 +1140,7 @@ button {
 }
 
 /*Desktop VIEW  */
-@media (min-width: 700px) {
+@media (min-width: 992px) {
 
   a,
   button {
@@ -1010,6 +1156,7 @@ button {
     justify-self: start;
     align-self: center;
     font-size: 200%;
+    margin-left:1rem;
   }
 
   .logo {
@@ -1115,7 +1262,7 @@ footer {
   border: 2px solid var(--green);
 }
 
-@media (min-width:800px) {
+@media (min-width:992px) {
   .form-contact {
     margin: 0 auto;
     max-width: 30%;
