@@ -109,19 +109,19 @@ europe.addEventListener('click', function(){
 hotelLocationFirst.innerHTML="Ixia"
 hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Ixia."
 priceFirst.innerHTML="250$"
-hotelImgFirst.src="./images/download (1).jfif"
+hotelImgFirst.src="./images/downloadone.jfif"
 //second image
 hotelNameSecond.innerText="Hard Rock Hotel"
 hotelLocationSecond.innerHTML="Madrid"
 hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Madrid"
 priceSecond.innerHTML="330$"
-hotelImgSecond.src="./images/images (1).jfif"
+hotelImgSecond.src="./images/imagesone.jfif"
 //third image
 hotelNameThird.innerText="Icehotel"
 hotelLocationThird.innerHTML="Jukkasjärvi"
 hotelDescriptionThird.innerHTML="Book now to spend amazing days in Sweeden."
 priceThird.innerHTML="450$";
-hotelImgThird.src="./images/download (2).jfif"
+hotelImgThird.src="./images/downloadtwo.jfif"
 })
 northAmerica.addEventListener('click', function(){
     //first image
@@ -183,7 +183,7 @@ southAmerica.addEventListener('click', function(){
    hotelLocationThird.innerHTML="Buenos Aires"
    hotelDescriptionThird.innerHTML="Book now to spend amazing days in Buenos Aires."
    priceThird.innerHTML="300$";
-   hotelImgThird.src="./images/download (3).jfif"
+   hotelImgThird.src="./images/downloadthree.jfif"
 })
 asia.addEventListener('click', function(){
    //first image
@@ -191,19 +191,19 @@ asia.addEventListener('click', function(){
    hotelLocationFirst.innerHTML="Japan"
    hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Japan."
    priceFirst.innerHTML="220$"
-   hotelImgFirst.src="./images/download (4).jfif"
+   hotelImgFirst.src="./images/downloadfour.jfif"
    //second image
    hotelNameSecond.innerText="Golden Temple"
    hotelLocationSecond.innerHTML="Slem Reap"
    hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Slem Reap"
    priceSecond.innerHTML="100$"
-   hotelImgSecond.src="./images/download (5).jfif"
+   hotelImgSecond.src="./images/downloadfive.jfif"
    //third image
    hotelNameThird.innerText="China Hotel"
    hotelLocationThird.innerHTML="Guangzhou"
    hotelDescriptionThird.innerHTML="Book now to spend amazing days in Guangzhou."
    priceThird.innerHTML="200$";
-   hotelImgThird.src="./images/download (6).jfif"
+   hotelImgThird.src="./images/downloadsix.jfif"
 
 })
 antarctica.addEventListener('click', function(){
@@ -212,19 +212,19 @@ antarctica.addEventListener('click', function(){
    hotelLocationFirst.innerHTML="Antarctica"
    hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Antarctica."
    priceFirst.innerHTML="600$"
-   hotelImgFirst.src="./images/download (7).jfif"
+   hotelImgFirst.src="./images/downloadseven.jfif"
    //second image
    hotelNameSecond.innerText="Adventure ship"
    hotelLocationSecond.innerHTML="Antarctica"
    hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Antarctica"
    priceSecond.innerHTML="600$"
-   hotelImgSecond.src="./images/download (8).jfif"
+   hotelImgSecond.src="./images/downloadeight.jfif"
    //third image
    hotelNameThird.innerText="Ocean Nova"
    hotelLocationThird.innerHTML="Antarctica"
    hotelDescriptionThird.innerHTML="Book now to spend amazing days in Antarctica."
    priceThird.innerHTML="600$";
-   hotelImgThird.src="./images/download (9).jfif"
+   hotelImgThird.src="./images/downloadnine.jfif"
 })
 
 
