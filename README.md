@@ -29,7 +29,7 @@ This project is built with HTML5, CSS3 and JavaScript.
 ![mobile](ss/ss-phone-three.jpg)
 ![mobile](ss/ss-phone-four.jpg)
 ![mobile](ss/ss-phone-five.jpg)
-![mobille](ss/ss-phone-fix.jpg)
+![mobille](ss/ss-phone-six.jpg)
 
 ### Links
 
