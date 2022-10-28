@@ -24,12 +24,12 @@ This project is built with HTML5, CSS3 and JavaScript.
 ![desktop](ss/ss-desktop-first.png)
 ![desktop](ss/ss-desktop-second.png)
 ![desktop](ss/ss-desktop-third.png)
-![desktop](ss/ss-desktop-fourth.png)
 ![mobile](ss/ss-phone-one.jpg)
 ![mobile](ss/ss-phone-two.jpg)
 ![mobile](ss/ss-phone-three.jpg)
 ![mobile](ss/ss-phone-four.jpg)
 ![mobile](ss/ss-phone-five.jpg)
+![mobille](ss/ss-phone-fix.jpg)
 
 ### Links
 
