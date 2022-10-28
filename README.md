@@ -165,141 +165,246 @@ Later on I am going to explain how I did style with CSS.
 </aside>
 ```
 
-I have aside included, just for better design and good looking. My second section are pictures. I am using figure tag for accessibility. I also included buttons on three divs, 2 for left and right side, so later with javascript i will make it clickable and to be able to change pictures on click. I used font awesome icons for left and right arrows. There are three divs, which consist of img,h3,p. Later on I'll explain how i styled with CSS. I needed to provide for screen readers text for buttons and labels, and on some places i used css and html together to be visually hidden.
+I have aside included, just for better design and good looking. My second section consists of sliders. I am using lists  for accessibility. I also included buttons on three divs, 2 for left and right side, so later with javascript i will make it clickable and to be able to change pictures on click. I used font awesome icons for left and right arrows. There are three divs, which consist of img,h3,p. Later on I'll explain how i styled with CSS. I needed to provide for screen readers text for buttons and labels, and on some places i used css and html together to be visually hidden.
 
 ```html
-<section id="top" class="section-two">
-  <div class="first-picture">
-    <figure class="figure-first">
-      <img
-        id="firstImage"
-        src="./images/europe-top-attractions-colosseum-rome.jpg"
-        alt=""
-      />
-    </figure>
-    <div class="parent-box-blue">
-      <div class="parent-button">
-        <button id="btnLeft" class="btn-left" aria-hidden="true">
+<section id="top" class="slider-wrapper section-two">
+      <div class="slider-first">
+        <ul class="slides-container slider" id="slides-container">
+          <li class="figure-first slide">
+            <img
+              class="img"
+              src="./images/europe-top-attractions-colosseum-rome.jpg"
+              alt=""
+            >
+          </li>
+          <li class="figure-first slide">
+            <img
+              class="img"
+              src="./images/europe-top-attractions-eiffel-tower.jpg"
+              alt=""
+            >
+          </li>
+          <li class="figure-first slide">
+            <img
+              class="img"
+              src="./images/europe-top-attractions-acropolis-athens-greece.jpg"
+              alt=""
+            >
+          </li>
+        </ul>
+        <button
+          class="slide-arrow btn-left"
+          aria-hidden="true"
+          id="slide-arrow-prev"
+        >
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-        <button id="btnRight" class="btn-right" aria-hidden="true">
+
+        <button
+          class="slide-arrow btn-right"
+          aria-hidden="true"
+          id="slide-arrow-next"
+        >
           <i class="fa-solid fa-circle-arrow-right"> </i>
           <span class="visually-hidden">Button right</span>
         </button>
+        <div class="parent-box-blue">
+          <h3>Europe's most visited places</h3>
+          <p>
+            You can see different destinations as Colloseum,Eiffel
+            tower,Acropolis and many more.
+          </p>
+        </div>
       </div>
-      <div class="blue-box">
-        <h3 id="continent">Europe's most visited places</h3>
-        <p id="description">
-          COLLOSSEUM ITALY Romes Flavian Amphitheater, better known as the
-          Colosseum
-        </p>
-        <a
-          href="https://www.planetware.com/rome/colosseum-i-la-rcl.htm"
-          target="_blank"
-          class="btn"
-          >Continue reading</a
+      <div class="second-slider">
+        <div class="parent-box-pink">
+          <h3>Asian's most visited places</h3>
+          <p>
+            Although Mount Fuji is an active stratovolcano, it hasn't erupted
+            since 1708.
+          </p>
+        </div>
+        <ul class="slides-container-second" id="slides-container-second">
+          <li class="figure-first slide-two">
+            <img
+              class="img"
+              src="./images/asia-best-places-to-visit-mount-fuji-japan.jpg"
+              alt=""
+            >
+          </li>
+          <li class="figure-first slide-two">
+            <img
+              class="img"
+              src="./images/asia-best-places-to-visit-phuket-thailand.jpg"
+              alt=""
+            >
+          </li>
+          <li class="figure-first slide-two">
+            <img
+              class="img"
+              src="./images/asia-best-places-to-visit-dead-sea-israel-city.jpg"
+              alt=""
+            >
+          </li>
+        </ul>
+        <button
+          class="btn-left-pink btn-left-second"
+          aria-hidden="true"
+          id="slide-arrow-second"
         >
-      </div>
-    </div>
-  </div>
-  <div class="second-picture">
-    <figure class="figure-first">
-      <div class="parent-button">
-        <button class="btn-left-pink" aria-hidden="true">
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-        <button class="btn-right-pink" aria-hidden="true">
+
+        <button
+          class="slide-arrow-second btn-right-pink btn-right-second"
+          aria-hidden="true"
+          id="slide-arrow-next-second"
+        >
           <i class="fa-solid fa-circle-arrow-right"></i>
-          <span class="visually-hidden">Button left</span>
+          <span class="visually-hidden">Button right</span>
         </button>
       </div>
-      <img
-        src="./images/asia-best-places-to-visit-mount-fuji-japan.jpg"
-        alt=""
-      />
-    </figure>
-    <div class="parent-box-pink">
-      <div class="pink-box">
-        <h3>Asian's most visited places</h3>
-        <p>
-          Although Mount Fuji is an active stratovolcano, it hasn't erupted
-          since 1708.
-        </p>
-        <a
-          href="https://www.planetware.com/japan/mount-fuji-jpn-kn-fuji.htm"
-          target="_blank"
-          class="btn-pink"
-          >Continue reading</a
+
+      <div class="slider-third">
+        <ul class="slides-container-third" id="slides-container-third">
+          <li class="figure-first slide-three">
+            <img
+              class="img"
+              src="./images/africa-best-places-to-visit-back-in-time-zanzibar-tanzania.jpg"
+              alt=""
+          >
+          </li>
+          <li class="figure-first slide-three">
+            <img
+              class="img"
+              src="./images/africa-best-places-to-visit-cape-town-south-africa.jpg"
+              alt=""
+            >
+          </li>
+          <li class="figure-first slide-three">
+            <img
+              class="img"
+              src="./images/africa-best-places-to-visit-great-pyramids-cairo-egypt.jpg"
+              alt=""
+            >
+          </li>
+        </ul>
+
+        <button
+          class="btn-left-third"
+          id="slide-arrow-third"
+          aria-hidden="true"
         >
-      </div>
-    </div>
-  </div>
-  <div class="first-picture">
-    <figure class="figure-first">
-      <img
-        src="./images/africa-best-places-to-visit-cape-town-south-africa.jpg"
-        alt=""
-      />
-    </figure>
-    <div class="parent-box-blue">
-      <div class="parent-button">
-        <button class="btn-left" aria-hidden="true">
           <i class="fa-solid fa-circle-arrow-left"></i>
           <span class="visually-hidden">Button left</span>
         </button>
-        <button class="btn-right" aria-hidden="true">
+
+        <button class="btn-right-third" id="slide-arrow-next-third">
           <i class="fa-solid fa-circle-arrow-right"></i>
-          <span class="visually-hidden">Button left</span>
+          <span class="visually-hidden">Button right</span>
         </button>
+        <div class="parent-blue-box-third">
+          <h3>Africa's most visited places</h3>
+          <p>
+            One of the most beloved destinations in Africa, like Cairo,Cape Town
+            and Zanzibar.
+          </p>
+        </div>
       </div>
-      <div class="blue-box">
-        <h3>Africa's most visited places</h3>
-        <p>
-          One of the most beloved destinations on the continent, Cape Town sits
-          at the southern tip of South Africa,
-        </p>
-        <a
-          href="https://www.planetware.com/tourist-attractions-/cape-town-saf-wc-cape.htm"
-          target="_blank"
-          class="btn"
-          >Continue reading</a
-        >
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 ```
 
-At the third section i have list with small images. With 4 divs after it, which include h3,p,img.
+At the third section i have list with small images where I used css to make it all ok.. With 3 divs after it, which include h3,p,img. And later on, with JavaSript on click will change all that images when be clicked on continent.
 
 ```html
-<section id="places" class="section-three">
-  <ul class="continents">
-    <li class="cont-li">
-      <a href="#1" class="cont-link"
-        ><img src="./images/antartica.png" alt="" />Antartica</a
-      >
-    </li>
-  </ul>
-  <div class="parent-prices">
-    <div class="hotel-prices">
-      <img src="./images/tm-img-07.jpg" alt="" />
-      <div class="mid-text">
-        <h3 class="hotel-name">Hotel meow</h3>
-        <p class="hotel-location">Paris</p>
-        <p class="hotel-description">
-          Here u can book rooms for very cheap and feel so happy
-        </p>
+    <section id="places" class="section-three">
+      <ul class="continents">
+        <li class="cont-li">
+          <a href="#1" class="cont-link antarctica"
+            ><img src="./images/antartica.png" alt="">Antartica</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#2" class="cont-link asia"
+            ><img src="./images/asia.png" alt="" >Asia</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#3" class="cont-link north-america"
+            ><img src="./images/north-america.png" alt="" >North America</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#4" class="cont-link europe"
+            ><img src="./images/europe.png" alt="" >Europe</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#5" class="cont-link australia"
+            ><img src="./images/australia.png" alt="" >Australia</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#6" class="cont-link south-america"
+            ><img src="./images/south-america.png" alt="">South America</a
+          >
+        </li>
+        <li class="cont-li">
+          <a href="#7" class="cont-link africa"
+            ><img src="./images/africa.png" alt="" >Africa</a
+          >
+        </li>
+      </ul>
+      <div class="parent-prices">
+        <div class="hotel-prices first-hotel">
+          <img class="first-hotel-img" src="./images/downloadone.jfif" alt="" >
+          <div class="mid-text mid-text-first">
+            <h3 class="hotel-name hotel-name-first">Sheraton Rhodes</h3>
+            <p class="hotel-location hotel-location-first">Ixia</p>
+            <p class="hotel-description hotel-description-first">
+              Book now to spend amazing days in Ixia.
+            </p>
+          </div>
+          <div class="right-prices right-prices-first">
+            <p class="price price-first">330$</p>
+          </div>
+        </div>
+
+        <div class="hotel-prices second-hotel">
+          <img class="second-hotel-img" src="./images/imagesone.jfif " alt="" >
+          <div class="mid-text mid-text-second">
+            <h3 class="hotel-name hotel-name-second">Hard Rock Hotel</h3>
+            <p class="hotel-location hotel-location-second">Madrid</p>
+            <p class="hotel-description hotel-description-second">
+              Book now to spend amazing days in Madrid.
+            </p>
+          </div>
+          <div class="right-prices right-prices-second">
+            <p class="price price-second">250$</p>
+          </div>
+        </div>
+        <div class="hotel-prices third-hotel">
+          <img
+            class="third-hotel-img"
+            src="./images/downloadtwo.jfif "
+            alt=""
+          >
+          <div class="mid-text mid-text-third">
+            <h3 class="hotel-name hotel-name-third">Icehotel</h3>
+            <p class="hotel-location hotel-location-third">Sweeden</p>
+            <p class="hotel-description hotel-description-third">
+              Book now to spend amazing days in Sweeden.
+            </p>
+          </div>
+          <div class="right-prices right-prices-third">
+            <p class="price price-third">450$</p>
+          </div>
+        </div>
       </div>
-      <div class="right-prices">
-        <p class="price">450$</p>
-        <a href="#" class="btn-price">Continue reading</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 ```
 
 In the last section is form what is just contact form, with submit button.
@@ -417,7 +522,8 @@ Background image was very challenging for me. I couldnt get shadow on the image.
 First form, was hard to make at first. I didnt know what to use. Should I start with tables, or use CSS. So I done some research and I used CSS Grid. For mobile view, was easy, but for desktop view was much harder, but I was able to manage it . So I will include code for desktop view for form. I included box shadow here, because looks better to me. And max-width of 70%.
 
 ```css
-* Form Desktop view*/ @media (min-width:800px) {
+/* Form Desktop view*/ 
+@media (min-width:800px) {
   .form {
     display: grid;
     gap: 1rem;
@@ -488,16 +594,89 @@ Most of the time I am using rem, or em units, but sometimes I used % and avoid t
 
 For continents I made class and used flexbox, with space-between and flex wrap wrap, so to make it more accessible on small screen later on.
 Last section is one div which includes one picture, h3 and p. Also I made them to be separated, on the left side is picture, middle is text and description, and on the right side is price of it. On right side, I included one background image whhat is curve and giving well looking to this section, prices and all.
-My JavaScript part is still ongoin, because I am searching on which way Ill do, moving images on click, and later on where are continents how on click to make list of 4 divs to have some hotels pictures, prices.
-I started writing all on json file, than I changed mind to maybe write all in JavaScript. So this are some of the stuff I need to work till I submit final project.
 
-### Built with
+I used media queries for 3 views: mobile, tablet and dekstop view. I got problem, when I wanted to make all accessible. So I used for tablet view min-width and max-width, just for tablet, so I didnt have problem later on with anything.
+
+I want to make still animation, on header, and one button.
+
+For JavaScript part , Ive done first for hamburger on click. I just connected all n make variables. 
+```js
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+navToggle.addEventListener('click', () => {
+
+    nav.classList.toggle('nav--visible');
+})
+```
+After that I moved on buttons, left and right for second section, where I made it clickable, and to change images. 
+```js
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+ 
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
+});
+ 
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+});
+```
+So when clicked move and show images. I used clientWidth. So when we click on right or left button gonna change images. 
+And for the last part where I used JavaScript, I used also on click event. I needed to connect one continent with all text what I prepared, what is in another 3 containers. 
+```js
+const antarctica=document.querySelector(".antarctica");
+const asia=document.querySelector(".asia");
+const northAmerica=document.querySelector(".north-america");
+const europe=document.querySelector(".europe");
+const australia=document.querySelector(".australia");
+const southAmerica=document.querySelector(".south-america");
+const africa=document.querySelector(".africa");
+const container=document.querySelector(".parent-prices");
+const hotelImgFirst=document.querySelector(".first-hotel-img")
+const midTextFirst=document.querySelector('.mid-text-first')
+const hotelNameFirst=document.querySelector('.hotel-name-first')
+const hotelLocationFirst=document.querySelector('.hotel-location-first')
+const hotelDescriptionFirst=document.querySelector('.hotel-description-first')
+const priceFirst=document.querySelector('.price-first')
+
+//add event listener to continents
+
+africa.addEventListener('click', function(){
+  //first image
+  hotelNameFirst.innerText="La Mamounia Hotel "
+hotelLocationFirst.innerHTML="Marakesh"
+hotelDescriptionFirst.innerHTML="Book now to spend amazing days in Marakesh."
+priceFirst.innerHTML="220$"
+hotelImgFirst.src="./images/lamamonia.jfif"
+//second image
+hotelNameSecond.innerText="Sofitel Cairo"
+hotelLocationSecond.innerHTML="Cairo"
+hotelDescriptionSecond.innerHTML="Book now to spend amazing days in Cairo"
+priceSecond.innerHTML="120$"
+hotelImgSecond.src="./images/sofitel-cairo.jfif"
+//third image
+hotelNameThird.innerText="Ol Jogi"
+hotelLocationThird.innerHTML="Il polei"
+hotelDescriptionThird.innerHTML="Book now to spend amazing days in Kenya";
+priceThird.innerHTML="310$";
+hotelImgThird.src="./images/kenya.jfif"
+})
+```
+So this is how I connected all. So every time when we click on one of the continents will give us different pictures and different text. 
+
+
+### Built with 
 
 - Semantic HTML5 markup
 - CSS3 (flexbox, grid)
 - JavaScript
 
 ### What I learned
+I learned how to actually connect all together and make something what actually working. Of course we need to always practice more and more, to be better in everything. 
 
 ## Author
 
